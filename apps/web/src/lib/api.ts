@@ -7,7 +7,13 @@
  */
 const isServer = typeof window === "undefined";
 
-const SERVER_BASE = process.env.API_BASE_URL || "http://localhost:8000";
+// Server-side base URL for the FastAPI backend. `API_BASE_URL` overrides it
+// (set in .env.local for local dev). The default points at the deployed
+// Hugging Face backend so a host with no env config (e.g. Hostinger) still
+// reaches it out of the box.
+const SERVER_BASE =
+  process.env.API_BASE_URL ||
+  "https://abdulmalik1113456789-ai-law-backend.hf.space";
 const CLIENT_BASE = "/api"; // proxied via next.config rewrites
 
 export class ApiError extends Error {

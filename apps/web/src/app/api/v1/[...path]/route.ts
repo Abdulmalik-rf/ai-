@@ -11,7 +11,9 @@
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
-const BACKEND = process.env.API_BASE_URL || "http://localhost:8000";
+const BACKEND =
+  process.env.API_BASE_URL ||
+  "https://abdulmalik1113456789-ai-law-backend.hf.space";
 
 export const dynamic = "force-dynamic";
 

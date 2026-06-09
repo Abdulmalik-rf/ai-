@@ -5,7 +5,9 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: "standalone",
+  // No `output: standalone` — Hostinger's managed Node.js runs `next start`,
+  // which serves static + public assets correctly and binds the PORT it
+  // assigns. (Standalone is only needed for container/Docker deploys.)
   experimental: {
     serverActions: { bodySizeLimit: "50mb" },
   },

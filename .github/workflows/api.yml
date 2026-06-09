@@ -1,0 +1,95 @@
+name: API CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/api/**"
+      - ".github/workflows/api.yml"
+  pull_request:
+    paths:
+      - "apps/api/**"
+
+defaults:
+  run:
+    working-directory: apps/api
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt pytest
+      - name: Smoke import + pure unit tests
+        env:
+          USE_PGVECTOR: "false"
+          LLM_PROVIDER: "openai"
+          DATABASE_URL: "postgresql+psycopg://x:x@localhost:5432/x"  # never connected
+          REDIS_URL: "redis://localhost:6379/0"
+        run: pytest -m "not integration" -v
+
+  integration-tests:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: legalai
+          POSTGRES_PASSWORD: legalai
+          POSTGRES_DB: legalai
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U legalai"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    env:
+      DATABASE_URL: "postgresql+psycopg://legalai:legalai@localhost:5432/legalai"
+      REDIS_URL: "redis://localhost:6379/0"
+      USE_PGVECTOR: "true"
+      LLM_PROVIDER: "openai"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt pytest
+      - name: Apply migrations
+        run: python -m alembic upgrade head
+      - name: Verify migration chain has a single head
+        run: |
+          heads=$(python -c "
+          from alembic.config import Config
+          from alembic.script import ScriptDirectory
+          sd = ScriptDirectory.from_config(Config('alembic.ini'))
+          print(' '.join(sd.get_heads()))")
+          echo "heads: $heads"
+          test $(echo "$heads" | wc -w) -eq 1
+      - name: Run integration tests
+        run: pytest -m integration -v
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install ruff
+      - run: ruff check app/ --select=E,F,W,B,UP --ignore=E501

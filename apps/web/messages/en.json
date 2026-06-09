@@ -1,0 +1,836 @@
+{
+  "common": {
+    "appName": "Mostashari AI",
+    "appNameLatin": "Mostashari AI",
+    "tagline": "Your intelligent legal counsel for Saudi Arabia",
+    "languageToggle": "العربية",
+    "themeToggle": "Toggle theme",
+    "signIn": "Sign in",
+    "signUp": "Get started",
+    "logout": "Sign out",
+    "loading": "Loading…",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "back": "Back",
+    "search": "Search",
+    "filter": "Filter"
+  },
+  "marketing": {
+    "hero": {
+      "badge": "Built for Saudi Arabia",
+      "title": "The AI-native operating system for law firms",
+      "subtitle": "Research, draft, review contracts, and manage cases & clients — in a single, bilingual workspace, grounded in Saudi laws with traceable citations.",
+      "ctaPrimary": "Start free trial",
+      "ctaSecondary": "Watch demo"
+    },
+    "features": {
+      "title": "Everything your firm needs in one place",
+      "subtitle": "One bilingual workspace that handles the legal work and runs the practice — so you stop juggling tools and start moving cases.",
+      "items": {
+        "workbench": {
+          "kicker": "LEGAL AI",
+          "title": "Research, draft, review — in one workspace",
+          "description": "Ask in plain Arabic or English and get answers cited from Saudi statutes. Draft contracts, memos and POAs from Saudi-context templates, upload a document and surface risks in seconds, and analyse cases with strategy suggestions — every output grounded in a source you can verify in one click.",
+          "bullet1": "Grounded research with Saudi statute citations",
+          "bullet2": "Bilingual drafting, contract review & risk surfacing",
+          "bullet3": "Case analysis with strategy and source links",
+          "cta": "Explore the workbench"
+        },
+        "operations": {
+          "kicker": "PRACTICE OS",
+          "title": "Run your whole practice from one inbox",
+          "description": "Connect your firm's WhatsApp and let the AI answer clients around the clock, qualify intakes, and escalate sensitive matters to you the moment they appear. Every conversation flows into a built-in CRM where clients, files, matters and deadlines live together.",
+          "bullet1": "WhatsApp AI agent — bilingual, lead-qualifying",
+          "bullet2": "Unified CRM: clients, files, matters & deadlines",
+          "bullet3": "24/7 intake with auto-escalation to you",
+          "cta": "Explore the practice hub"
+        }
+      }
+    },
+    "featuresPage": {
+      "navLink": "Features",
+      "hero": {
+        "kicker": "WHAT'S INSIDE",
+        "title": "The complete operating system for a Saudi law firm",
+        "subtitle": "One bilingual workspace that researches, drafts, reviews, and runs your practice — grounded in Saudi statutes with citations you can verify in a click."
+      },
+      "constellation": {
+        "kicker": "CAPABILITIES",
+        "title": "Six capabilities, one continuous workflow",
+        "subtitle": "Each capability speaks to the next — citations carry into drafts, drafts carry into review, review carries into the client thread.",
+        "items": {
+          "rag": {
+            "title": "Grounded legal research",
+            "body": "Ask in plain Arabic or English; get cited answers from Saudi statutes, your matters, and your firm's documents."
+          },
+          "drafting": {
+            "title": "Document drafting",
+            "body": "Saudi-context templates for NDAs, contracts, POAs, memos and demand letters — fully editable, version-tracked."
+          },
+          "review": {
+            "title": "Contract review",
+            "body": "Upload a draft; the agent surfaces risks, missing clauses, and rewrite suggestions in seconds."
+          },
+          "case": {
+            "title": "Case analysis",
+            "body": "Summarise case files, extract legal issues, and propose a strategy — every claim source-linked."
+          },
+          "crm": {
+            "title": "Built-in client CRM",
+            "body": "Clients, files, matters and deadlines in one structured place, woven into every conversation."
+          },
+          "whatsapp": {
+            "title": "WhatsApp channel",
+            "body": "Connect your firm's number; the AI replies 24/7, qualifies intakes, escalates to you when it matters."
+          }
+        }
+      },
+      "workbench": {
+        "kicker": "LEGAL AI WORKBENCH",
+        "title": "Research, draft, review — in one workspace",
+        "body": "Stop juggling tabs. Ask the assistant a question and watch it cite the right article, draft the matching clause, and flag the risk — without you leaving the thread. Every output is grounded in a verifiable Saudi source.",
+        "bullets": {
+          "0": "Inline citations to the Companies, Labor, Civil Transactions Law & more",
+          "1": "Bilingual drafting (AR / EN) from Saudi-context templates",
+          "2": "Risk surfacing with green / amber / red severity tags",
+          "3": "Case analysis: issues, applicable rules, suggested strategy"
+        },
+        "cta": "Try the workbench"
+      },
+      "operations": {
+        "kicker": "PRACTICE OPERATIONS",
+        "title": "Run your whole practice from one inbox",
+        "body": "Plug in your firm's WhatsApp and the assistant handles intake around the clock — qualifying leads, opening matters in the CRM, and pinging you the moment a sensitive case lands. No one re-asks the client a thing.",
+        "bullets": {
+          "0": "WhatsApp AI agent — bilingual, lead-qualifying",
+          "1": "Unified CRM: clients, files, matters & deadlines",
+          "2": "24/7 auto-intake with smart escalation to you",
+          "3": "Full audit log on every conversation and decision"
+        },
+        "cta": "Explore the practice hub"
+      },
+      "flow": {
+        "kicker": "HOW A MATTER FLOWS",
+        "title": "From a client's first message to a signed PDF",
+        "subtitle": "Every step is logged, cited, and shareable with your team.",
+        "steps": {
+          "0": {
+            "title": "Client reaches out",
+            "body": "A WhatsApp message arrives. The AI greets the client in their language and starts qualifying the matter."
+          },
+          "1": {
+            "title": "Intent detected & matched",
+            "body": "Intent is classified, the client is matched against the CRM, and a new matter is opened automatically."
+          },
+          "2": {
+            "title": "Research & draft",
+            "body": "The agent pulls the right statutes, drafts the document, and flags the risks for your review."
+          },
+          "3": {
+            "title": "You decide & sign",
+            "body": "You approve, edit, or push back. The signed PDF and a full change log are filed back into the matter."
+          }
+        }
+      },
+      "compare": {
+        "kicker": "THE OLD WAY VS. MOSTASHARI",
+        "title": "Replace seven tools with one bilingual workspace",
+        "rowsHeader": {
+          "feature": "Capability",
+          "old": "The old way",
+          "new": "With Mostashari"
+        },
+        "rows": {
+          "0": {
+            "feature": "Find the right Saudi statute",
+            "old": "Hours in PDFs",
+            "new": "Seconds, with citations"
+          },
+          "1": {
+            "feature": "Draft a contract",
+            "old": "Copy-paste a template",
+            "new": "Saudi-context, in-thread"
+          },
+          "2": {
+            "feature": "Review for risks",
+            "old": "Manual line-by-line",
+            "new": "AI risk pass in 30 s"
+          },
+          "3": {
+            "feature": "Answer a client at 2 a.m.",
+            "old": "You wake up — or you don't",
+            "new": "WhatsApp AI handles it"
+          },
+          "4": {
+            "feature": "Track every matter",
+            "old": "Excel + email + memory",
+            "new": "Built-in CRM"
+          },
+          "5": {
+            "feature": "Export for the bar",
+            "old": "Hand-assemble a PDF",
+            "new": "Signed PDF + audit log"
+          }
+        }
+      },
+      "bilingual": {
+        "kicker": "BILINGUAL · SAUDI-GROUNDED",
+        "title": "Built for the Kingdom, in your language",
+        "body": "Mostashari was trained on Saudi statutes from day one and speaks both Arabic and English natively. Switch mid-sentence — the answer follows.",
+        "chips": {
+          "0": "نظام الشركات",
+          "1": "نظام العمل",
+          "2": "نظام المعاملات المدنية",
+          "3": "نظام مكافحة الغش التجاري",
+          "4": "نظام التحكيم",
+          "5": "Companies Law",
+          "6": "Labor Law",
+          "7": "Civil Transactions"
+        }
+      },
+      "compliance": {
+        "kicker": "COMPLIANCE & TRUST",
+        "title": "Audit-ready by design",
+        "body": "Your firm's data lives inside the Kingdom, every output carries a verifiable source, and every change is logged. Designed alongside Saudi lawyers, not retrofitted for them.",
+        "badges": {
+          "0": {
+            "title": "PDPL compliant",
+            "body": "Data resident in the Kingdom, with role-based access and full deletion controls."
+          },
+          "1": {
+            "title": "ZATCA-ready invoicing",
+            "body": "VAT-compliant invoices with QR e-invoice format out of the box."
+          },
+          "2": {
+            "title": "Source-linked answers",
+            "body": "Every reply carries the article, statute, and year — verifiable in one click."
+          },
+          "3": {
+            "title": "Full audit trail",
+            "body": "Every prompt, output, and edit is logged. Export the matter and you have a complete record."
+          }
+        }
+      },
+      "cta": {
+        "kicker": "READY?",
+        "title": "Start with Mostashari today",
+        "subtitle": "Free 14-day trial. No card. Cancel anytime.",
+        "primary": "Start free trial",
+        "secondary": "Talk to us"
+      }
+    },
+    "cta": {
+      "kicker": "READY WHEN YOU ARE",
+      "title": "Give your firm an AI-native operating system",
+      "subtitle": "Join the Saudi law firms running research, drafting, contract review, and client comms inside one bilingual workspace — grounded in Saudi statutes.",
+      "primary": "Start free trial",
+      "secondary": "Book a demo",
+      "trust": {
+        "trial": "14-day trial",
+        "noCard": "No credit card",
+        "ksa": "Data stays in KSA",
+        "cancel": "Cancel anytime"
+      }
+    },
+    "howItWorks": {
+      "kicker": "GET STARTED IN MINUTES",
+      "title": "Three steps to your firm's private legal AI",
+      "subtitle": "No installs, no fine-tuning, no IT project. Sign up, import, work.",
+      "steps": {
+        "1": {
+          "title": "Create your firm account",
+          "body": "Sign up in under two minutes. We provision a private bilingual workspace, encrypted at rest, ready for your team.",
+          "meta": "~2 min"
+        },
+        "2": {
+          "title": "Import your firm's content",
+          "body": "Drop in templates, prior contracts, and active case files. The AI indexes everything privately to your tenant.",
+          "meta": "Bulk import"
+        },
+        "3": {
+          "title": "Start asking, drafting, reviewing",
+          "body": "Talk to your firm's AI in Arabic or English. Every output is cited, version-tracked, and exportable.",
+          "meta": "Live in ~10 min"
+        }
+      }
+    },
+    "pricing": {
+      "title": "Simple, transparent pricing",
+      "subtitle": "Everything in Mostashari AI. Choose how you want to be billed.",
+      "perMonth": "/month",
+      "perYear": "/year",
+      "currency": "SAR",
+      "ctaStart": "Start now",
+      "ctaContact": "Contact us",
+      "popular": "Most popular",
+      "toggleMonthly": "Monthly",
+      "toggleYearly": "Yearly",
+      "saveBadge": "Save 35%",
+      "planName": "Mostashari AI",
+      "planTagline": "Built for Saudi law firms",
+      "billedMonthlyNote": "Billed monthly · cancel anytime",
+      "billedYearlyNote": "Billed annually · cancel anytime",
+      "yearlyEquivalent": "Just __AMOUNT__ SAR / month, billed annually",
+      "features": {
+        "research": "Grounded legal research with Saudi citations",
+        "drafting": "Bilingual document drafting (AR / EN)",
+        "review": "Contract review with risk surfacing",
+        "case": "Case analysis & strategy",
+        "crm": "Built-in client CRM",
+        "whatsapp": "WhatsApp client channel",
+        "seats": "Up to 10 seats",
+        "support": "Priority support"
+      },
+      "trustNote": "VAT-compliant invoicing · ZATCA-ready · PDPL-compliant"
+    },
+    "footer": {
+      "rights": "© {year} Legal AI OS — All rights reserved.",
+      "terms": "Terms",
+      "privacy": "Privacy"
+    },
+    "conversation": {
+      "kicker": "Live demo",
+      "title": "A real chat with your AI counsel",
+      "subtitle": "Scroll to watch a typical drafting session unfold — exactly the way it feels in the dashboard.",
+      "header": "Mostashari AI",
+      "online": "Online · responds in seconds",
+      "you": "You",
+      "now": "Just now",
+      "msg1": "Draft an NDA for a software vendor in Riyadh.",
+      "msg2": "On it 👌  Saudi-jurisdiction NDA, 2-year confidentiality. Mutual or one-way?",
+      "msg3": "One-way — vendor receiving.",
+      "msg4": "Done. Cited Article 9, Anti-Commercial Fraud Law. Preview ready ↓",
+      "previewTitle": "NDA — Vendor (Riyadh)",
+      "previewLine": "Article 9 · Confidentiality · 2 years",
+      "msg5": "Add a non-circumvention clause.",
+      "msg6": "Added ✅  Saved as draft v2.",
+      "blurb1": {
+        "title": "Speak naturally",
+        "body": "Ask in plain Arabic or English. Mostashari understands intent — and asks the right follow-up before it acts. No prompt engineering, no boilerplate."
+      },
+      "blurb2": {
+        "title": "Grounded in Saudi law",
+        "body": "Every reply carries its source — article, statute, year of issuance. The assistant cites the Companies Law, Labor Law, Civil Transactions Law and more so you can verify in one click."
+      },
+      "blurb3": {
+        "title": "Iterate without losing context",
+        "body": "Add a clause, swap parties, change the term — the agent updates the draft in place, saves a new version, and remembers everything you've discussed in the thread."
+      },
+      "blurb4": {
+        "title": "Negotiate confidently",
+        "body": "Compare against official templates or earlier drafts, surface the substantive deltas, and request counter-proposals — all without leaving the thread."
+      },
+      "blurb5": {
+        "title": "Audit-ready exports",
+        "body": "Export digitally signed PDFs with a full change log and a citation manifest — ready for archiving, sharing, and audit by the bar association."
+      }
+    },
+    "about": {
+      "navLink": "About",
+      "kicker": "About us",
+      "title": "Building the future of legal work in the Kingdom",
+      "subtitle": "Mostashari AI is a Saudi-built platform that combines deep legal expertise with state-of-the-art AI, giving every lawyer and law firm the tools to work faster, more accurately, and with confidence.",
+      "story": {
+        "title": "Our story",
+        "p1": "Mostashari AI started with a simple observation: lawyers in the Kingdom spend hours searching statutes, drafting contracts, and reviewing case files — work that AI built for the Saudi context can complete in minutes.",
+        "p2": "We built Mostashari to be a legal counsel that understands the regulations, cites its sources, and respects client privacy. An assistant that frees lawyers from routine work so they can focus on what matters: their client, their case, their strategy.",
+        "p3": "Today Mostashari is used by Saudi firms to research, draft, and review in minutes work that once took hours. Every reply is grounded in a real Saudi source, every draft is editable, every change is logged. The platform belongs to the firms that practise inside it."
+      },
+      "pillars": {
+        "title": "What sets us apart",
+        "mission": {
+          "title": "Our mission",
+          "body": "Empower every Saudi lawyer to work with exceptional efficiency through a single workspace combining research, drafting, and review."
+        },
+        "team": {
+          "title": "Our team",
+          "body": "Lawyers and AI engineers working side by side — every feature is reviewed by counsel before it ships to you."
+        },
+        "commitment": {
+          "title": "Our commitment",
+          "body": "Data stays inside the Kingdom, citations are always traceable, and privacy isn't a setting — it's the foundation."
+        }
+      },
+      "values": {
+        "title": "Our values",
+        "items": {
+          "trust": {
+            "title": "Traceable",
+            "body": "Every answer carries its source. No fabrication, no claims without evidence."
+          },
+          "privacy": {
+            "title": "Private by design",
+            "body": "Your firm's data is fully isolated. We don't share it and we don't train on it."
+          },
+          "saudi": {
+            "title": "Saudi-first",
+            "body": "Built from day one for Saudi regulations: Companies, Labor, Civil Transactions, and more."
+          },
+          "speed": {
+            "title": "Fast",
+            "body": "What used to take hours now takes minutes. Your time is your firm's most valuable asset."
+          }
+        }
+      },
+      "cta": {
+        "title": "Practising law in the Kingdom?",
+        "subtitle": "Start your free trial today and join the firms choosing to work smarter.",
+        "primary": "Start free",
+        "secondary": "Contact us"
+      },
+      "stats": {
+        "kicker": "By the numbers",
+        "items": {
+          "statutes": { "value": 150, "suffix": "+", "label": "Saudi statutes indexed" },
+          "response": { "value": 1.8, "suffix": "s", "label": "Avg. assistant response", "decimals": 1 },
+          "accuracy": { "value": 99, "suffix": "%", "label": "Citation accuracy" },
+          "timeSaved": { "value": 70, "suffix": "%", "label": "Routine work eliminated" }
+        }
+      },
+      "saudiCallout": {
+        "kicker": "Built in the Kingdom",
+        "title": "Trained on Saudi law. Deployed inside Saudi borders.",
+        "body": "Every regulation, every court opinion, every commercial register entry our agent quotes comes from a verifiable Saudi source. Your data never leaves the region — and the entire pipeline is engineered to meet PDPL, ZATCA, and Vision-2030 cloud guidelines.",
+        "cities": ["Riyadh", "Jeddah", "Dammam", "Makkah", "Madinah", "AlKhobar"],
+        "chips": [
+          "Companies Law",
+          "Labor Law",
+          "Civil Transactions",
+          "Anti-Commercial Fraud",
+          "VAT & ZATCA",
+          "PDPL"
+        ]
+      },
+      "manifesto": {
+        "kicker": "Our promise",
+        "quote": "Lawyers should spend their time on judgment, strategy, and clients — not on chasing footnotes. Mostashari was built so the routine never owns your calendar again.",
+        "attribution": "The Mostashari AI team"
+      },
+      "principles": {
+        "title": "How we build",
+        "items": {
+          "grounded": {
+            "title": "Grounded, not generative",
+            "body": "Every claim cites an article, a statute, or a court opinion. If we can't trace it, we don't say it."
+          },
+          "lawyerLed": {
+            "title": "Lawyer-led design",
+            "body": "Saudi counsel reviews every workflow before it ships. The product reflects how firms actually practise."
+          },
+          "compliant": {
+            "title": "Compliant from day one",
+            "body": "PDPL-compliant data handling, ZATCA-ready invoicing, and Saudi-resident infrastructure baked in."
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to continue to your dashboard.",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create one",
+      "errors": {
+        "wrong_credentials": "Wrong email or password.",
+        "email_taken": "This email is already registered. Try signing in instead.",
+        "validation": "Please check the form and try again.",
+        "network": "Couldn't reach the server. Check your connection and try again.",
+        "unknown": "Something went wrong. Please try again."
+      }
+    },
+    "signup": {
+      "title": "Create your firm account",
+      "subtitle": "14-day free trial. No credit card required.",
+      "firmNameLabel": "Firm name",
+      "fullNameLabel": "Full name",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submit": "Create account",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "errors": {
+        "wrong_credentials": "Wrong email or password.",
+        "email_taken": "This email is already registered. Try signing in instead.",
+        "validation": "Please check the form and try again.",
+        "network": "Couldn't reach the server. Check your connection and try again.",
+        "unknown": "Something went wrong. Please try again."
+      }
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Home",
+      "create": "Create document",
+      "review": "Review",
+      "ask": "Ask assistant",
+      "search": "Search",
+      "files": "My files",
+      "whatsapp": "WhatsApp agent",
+      "cases": "Cases",
+      "clients": "Clients",
+      "billing": "Subscription",
+      "settings": "Settings",
+      "support": "Support",
+      "suggestions": "Suggestions",
+      "guide": "How to use",
+      "logout": "Sign out",
+      "chat": "AI assistant",
+      "documents": "Documents",
+      "contracts": "Contract review",
+      "drafting": "Drafting",
+      "tasks": "Tasks",
+      "hearings": "Hearings",
+      "contactsCrm": "Contacts",
+      "staff": "Staff",
+      "timeEntries": "Time",
+      "consultations": "Consultations"
+    },
+    "crm": {
+      "summary": {
+        "totalClients": "Total clients",
+        "activeClients": "Active",
+        "leads": "Leads",
+        "openCases": "Open cases",
+        "casesInCourt": "In court",
+        "overdueTasks": "Overdue tasks",
+        "openTasks": "Open tasks",
+        "unbilledHours": "Unbilled (30d)",
+        "unpaidInvoices": "Unpaid invoices",
+        "todayHearings": "Today's hearings",
+        "upcomingHearings": "Upcoming hearings",
+        "myTasks": "My open tasks",
+        "recentActivity": "Recent activity",
+        "noHearingsToday": "No hearings today",
+        "noUpcoming": "Nothing in the next 7 days",
+        "noTasks": "No open tasks",
+        "noActivity": "No activity yet"
+      },
+      "tasks": {
+        "title": "Tasks",
+        "new": "New task",
+        "createTitle": "Create a task",
+        "fieldTitle": "Title",
+        "fieldDescription": "Description",
+        "fieldPriority": "Priority",
+        "fieldDue": "Due date",
+        "fieldCase": "Case",
+        "fieldAssignee": "Assignee",
+        "empty": "No tasks yet",
+        "byStatus": {
+          "open": "Open",
+          "in_progress": "In progress",
+          "blocked": "Blocked",
+          "completed": "Completed",
+          "cancelled": "Cancelled"
+        },
+        "markComplete": "Mark complete",
+        "fieldAssigneeNone": "— Unassigned —",
+        "fieldAssigneeNoStaff": "Add staff first to assign tasks"
+      },
+      "staff": {
+        "title": "Staff",
+        "subtitle": "Add your team. Anyone with a phone number is auto-added to your WhatsApp allowlist and pinged by the AI agent when a task is assigned to them.",
+        "new": "Add staff member",
+        "createTitle": "Add staff member",
+        "fieldFullName": "Full name",
+        "fieldEmail": "Email",
+        "fieldPhone": "WhatsApp number",
+        "fieldPhoneHint": "International format, e.g. 9665XXXXXXXX. Leave empty if they don't need WhatsApp pings.",
+        "fieldRole": "Role",
+        "fieldLocale": "Language",
+        "empty": "No staff yet. Add the first member to start assigning tasks.",
+        "roleAdmin": "Admin",
+        "roleLawyer": "Lawyer",
+        "rolePartner": "Partner",
+        "roleParalegal": "Paralegal",
+        "phoneSynced": "On WhatsApp allowlist",
+        "phoneEmpty": "No WhatsApp number",
+        "active": "Active",
+        "inactive": "Inactive",
+        "deactivate": "Deactivate",
+        "edit": "Edit",
+        "savePhone": "Save phone",
+        "createdToast": "Staff member added"
+      },
+      "hearings": {
+        "title": "Hearings",
+        "new": "Schedule hearing",
+        "fieldCase": "Case",
+        "fieldDate": "Date & time",
+        "fieldCourt": "Court",
+        "fieldRoom": "Room",
+        "fieldJudge": "Judge",
+        "fieldKind": "Type",
+        "empty": "No hearings scheduled",
+        "outcomePlaceholder": "Record outcome…",
+        "saveOutcome": "Save outcome",
+        "today": "Today",
+        "upcoming": "Upcoming",
+        "past": "Past"
+      },
+      "contacts": {
+        "title": "Contacts",
+        "new": "New contact",
+        "fieldName": "Name",
+        "fieldKind": "Type",
+        "fieldOrganization": "Organization",
+        "fieldPhone": "Phone",
+        "fieldEmail": "Email",
+        "empty": "No contacts yet"
+      },
+      "case": {
+        "tabs": {
+          "overview": "Overview",
+          "tasks": "Tasks",
+          "hearings": "Hearings",
+          "time": "Time",
+          "notes": "Notes",
+          "documents": "Documents",
+          "activity": "Activity"
+        },
+        "court": "Court",
+        "courtCaseNo": "Court case #",
+        "judge": "Judge",
+        "opposingParty": "Opposing party",
+        "opposingCounsel": "Opposing counsel",
+        "nextHearing": "Next hearing",
+        "noNextHearing": "No upcoming hearing"
+      },
+      "common": {
+        "create": "Create",
+        "cancel": "Cancel",
+        "save": "Save",
+        "delete": "Delete",
+        "search": "Search…",
+        "noResults": "No results"
+      }
+    },
+    "topbar": {
+      "welcome": "Hi",
+      "subscribe": "Subscribe",
+      "help": "Help",
+      "notifications": "Notifications",
+      "profile": "Profile",
+      "toggleSidebar": "Toggle sidebar",
+      "toggleTheme": "Toggle theme"
+    },
+    "home": {
+      "greetingMorning": "Good morning",
+      "greetingEvening": "Good evening",
+      "prompt": "How can I help you today?",
+      "inputPlaceholder": "Ask me…",
+      "send": "Send",
+      "attach": "Attach file",
+      "options": "Options",
+      "chips": {
+        "draft": "Draft a defense memo for me",
+        "review": "Review this employment contract",
+        "search": "Search the new Labor Law",
+        "ask": "What are the steps to incorporate a company?"
+      },
+      "feature": {
+        "title": "Your AI agent on WhatsApp",
+        "subtitle": "Pair your firm's number and train the agent to handle clients, gather case details, and book consultations automatically.",
+        "cta": "Set up the agent"
+      },
+      "actions": {
+        "review": {
+          "title": "Review documents",
+          "subtitle": "Smart review with risk detection"
+        },
+        "upload": {
+          "title": "Upload your file",
+          "subtitle": "Upload a legal document for analysis"
+        },
+        "create": {
+          "title": "Create a legal document",
+          "subtitle": "Generate a new document with AI"
+        },
+        "files": {
+          "title": "My files",
+          "subtitle": "View your legal documents"
+        },
+        "search": {
+          "title": "Search legal documents",
+          "subtitle": "Search across thousands of rulings"
+        },
+        "ask": {
+          "title": "Ask the assistant",
+          "subtitle": "Instant smart legal consultations"
+        },
+        "whatsapp": {
+          "title": "WhatsApp agent",
+          "subtitle": "Connect your number and train the agent"
+        }
+      }
+    },
+    "whatsapp": {
+      "title": "WhatsApp agent",
+      "subtitle": "Connect your firm's WhatsApp number, then teach the agent what to say to clients and how to behave.",
+      "masterEnabled": "Agent enabled",
+      "masterDisabled": "Agent disabled — incoming messages will not be answered.",
+      "connection": {
+        "title": "Connection",
+        "statusConnected": "Connected",
+        "statusPairing": "Waiting for scan",
+        "statusDisconnected": "Not connected",
+        "statusLoggedOut": "Unlinked from phone",
+        "statusError": "Error",
+        "phoneLabel": "Linked number",
+        "displayLabel": "Display name",
+        "lastConnected": "Last connected",
+        "connectButton": "Connect WhatsApp",
+        "disconnectButton": "Disconnect",
+        "retryButton": "Retry",
+        "pairingHint": "Open WhatsApp on your phone → Settings → Linked devices → Link a device, then scan the code.",
+        "qrAlt": "Pairing QR code",
+        "refreshQr": "Refresh code",
+        "errorPrefix": "Action failed",
+        "subscriptionRequired": "An active subscription is required to connect WhatsApp."
+      },
+      "behavior": {
+        "title": "Agent behavior",
+        "subtitle": "Tell the agent who you are, how it should introduce itself, and how to handle clients.",
+        "firmDisplayName": {
+          "label": "Firm name the agent uses",
+          "placeholder": "e.g. Alrifaee Law Office",
+          "help": "How the agent introduces itself. Leave blank to use the default firm name."
+        },
+        "welcomeAr": {
+          "label": "Welcome message (Arabic)",
+          "placeholder": "أهلًا بك في مكتب… كيف يمكنني مساعدتك؟",
+          "help": "Used only on the first reply to a new thread."
+        },
+        "welcomeEn": {
+          "label": "Welcome message (English)",
+          "placeholder": "Welcome to … — how can I help today?",
+          "help": "Used only on the first reply to a new thread."
+        },
+        "specialties": {
+          "label": "Firm specialties",
+          "placeholder": "e.g. corporate disputes, commercial litigation, governance…",
+          "help": "What your firm is great at, so the agent pitches it confidently."
+        },
+        "consultationOffer": {
+          "label": "Consultation offer",
+          "placeholder": "e.g. 30-minute paid consultation on Zoom.",
+          "help": "What the agent sells to a prospect. Don't include prices."
+        },
+        "tone": {
+          "label": "Tone guidelines",
+          "placeholder": "e.g. friendly and concise, use Saudi Arabic, ask one question per message.",
+          "help": "Sets how the agent talks."
+        },
+        "domains": {
+          "label": "Legal domains the agent handles",
+          "help": "Leave empty to handle all domains."
+        },
+        "custom": {
+          "label": "Additional instructions",
+          "placeholder": "Anything the structured fields didn't cover. E.g. never quote fees, always ask for the case reference, escalate any urgent criminal matter.",
+          "help": "Injected verbatim into the agent's instructions."
+        },
+        "timezone": {
+          "label": "Timezone",
+          "placeholder": "Asia/Riyadh"
+        },
+        "save": "Save changes",
+        "saving": "Saving…",
+        "saved": "Saved ✓"
+      },
+      "preview": {
+        "title": "Preview instructions",
+        "subtitle": "See the full instructions the agent will read before replying to a client.",
+        "showButton": "Show instructions",
+        "hideButton": "Hide instructions",
+        "loading": "Loading…",
+        "localeAr": "Arabic",
+        "localeEn": "English"
+      },
+      "domainNames": {
+        "commercial": "Commercial",
+        "labor": "Labor",
+        "family": "Family",
+        "criminal": "Criminal",
+        "real_estate": "Real estate",
+        "administrative": "Administrative",
+        "ip": "IP",
+        "corporate": "Corporate",
+        "banking": "Banking",
+        "other": "Other"
+      }
+    },
+    "overview": {
+      "title": "Overview",
+      "welcome": "Welcome, {name}",
+      "stats": {
+        "messages": "Messages this month",
+        "documents": "Documents",
+        "cases": "Active cases",
+        "clients": "Clients"
+      }
+    },
+    "chat": {
+      "newConversation": "New conversation",
+      "placeholder": "Ask a legal question…",
+      "send": "Send",
+      "citations": "Citations",
+      "page": "page"
+    },
+    "documents": {
+      "title": "Documents",
+      "upload": "Upload",
+      "empty": "You haven't uploaded any documents yet.",
+      "status": {
+        "uploaded": "Uploaded",
+        "processing": "Processing",
+        "indexed": "Ready",
+        "failed": "Failed"
+      }
+    },
+    "contracts": {
+      "title": "Contract review",
+      "selectDocument": "Select a contract to review",
+      "review": "Run review",
+      "summary": "Summary",
+      "findings": "Findings",
+      "suggestions": "Suggestions",
+      "missing": "Missing clauses",
+      "riskScore": "Risk score"
+    },
+    "cases": {
+      "title": "Cases",
+      "newCase": "New case",
+      "reference": "Reference",
+      "domain": "Domain",
+      "status": "Status",
+      "client": "Client",
+      "analyze": "AI analyze"
+    },
+    "clients": {
+      "title": "Clients",
+      "newClient": "New client",
+      "kindPerson": "Individual",
+      "kindCompany": "Company"
+    },
+    "drafting": {
+      "title": "Drafting",
+      "selectTemplate": "Pick a template",
+      "customInstructions": "Custom instructions"
+    },
+    "billing": {
+      "title": "Billing",
+      "currentPlan": "Current plan",
+      "upgradePlan": "Upgrade plan",
+      "cancelPlan": "Cancel subscription",
+      "usage": "Usage this month"
+    }
+  }
+}

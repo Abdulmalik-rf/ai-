@@ -1,0 +1,54 @@
+# env / secrets
+.env
+.env.*
+!.env.example
+.gemini_oauth.json
+*_oauth.json
+.codex_oauth.json
+.playwright_state.json
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# node
+node_modules/
+.next/
+.turbo/
+.pnpm-store/
+dist/
+build/
+
+# tooling / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# data
+*.sqlite
+*.sqlite3
+uploads/
+storage/
+# Large local-only artefacts: the corpus PDFs, OCR output, Drive downloads,
+# process logs, preview images. The corpus is re-creatable via scripts/ and
+# already lives in Postgres — it does not belong in git.
+data/
+*.log
+*.out
+*.err
+# Playwright browser profile used by the token scripts (contains cookies).
+.playwright_userdata/
+# ML model caches if they ever land in-tree.
+.cache/
+models/
+
+# build caches
+*.tsbuildinfo
+celerybeat-schedule*

@@ -57,3 +57,5 @@ celerybeat-schedule*
 .hf_token
 .deploy_secrets*
 deploy/.secrets*
+
+.hf_secrets

@@ -27,28 +27,43 @@ TOKEN = (API_DIR / ".hf_token").read_text(encoding="utf-8").strip()
 OWNER = "abdulmalik1113456789"
 SPACE = f"{OWNER}/ai-law-backend"
 
-# Things we never want in the Space image.
-EXCLUDE_DIRS = {".venv", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", "tests"}
-EXCLUDE_FILES = {".env", ".codex_oauth.json", ".gemini_oauth.json", ".hf_token",
-                 ".playwright_state.json", "celerybeat-schedule.bak",
-                 "celerybeat-schedule.dat", "celerybeat-schedule.dir"}
+# WHITELIST — only these paths from apps/api go into the Space. Whitelisting
+# (not blacklisting) guarantees no stray secret / browser-profile / cache
+# file leaks in, no matter what's sitting in apps/api locally.
+INCLUDE = ["app", "alembic", "alembic.ini", "requirements.txt"]
+
+# Within the copied trees, still skip caches/compiled junk.
+_SKIP_DIRS = {"__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache"}
 
 
 def _assemble(dest: Path) -> None:
-    """Copy apps/api into dest, then overlay the HF-specific files."""
+    """Copy ONLY the whitelisted paths, then overlay the HF-specific files."""
     def _ignore(dir_path: str, names: list[str]) -> set[str]:
-        ig: set[str] = set()
-        for n in names:
-            if n in EXCLUDE_DIRS or n in EXCLUDE_FILES:
-                ig.add(n)
-            if n.endswith((".pyc", ".log", ".out", ".err")):
-                ig.add(n)
-        return ig
+        return {n for n in names if n in _SKIP_DIRS or n.endswith((".pyc", ".log", ".out", ".err"))}
 
-    shutil.copytree(API_DIR, dest, ignore=_ignore, dirs_exist_ok=True)
+    dest.mkdir(parents=True, exist_ok=True)
+    for rel in INCLUDE:
+        src = API_DIR / rel
+        if not src.exists():
+            raise FileNotFoundError(f"whitelisted path missing: {src}")
+        if src.is_dir():
+            shutil.copytree(src, dest / rel, ignore=_ignore, dirs_exist_ok=True)
+        else:
+            shutil.copy2(src, dest / rel)
+
     # Overlay HF files (Dockerfile, start.sh, README.md) at the root.
     for f in ("Dockerfile", "start.sh", "README.md"):
         shutil.copy2(HF_FILES / f, dest / f)
+
+    # Hard safety check: refuse to deploy if any secret-ish file slipped in.
+    bad = [p for p in dest.rglob("*") if p.is_file() and (
+        p.name in (".env", ".hf_token", ".hf_secrets", ".deploy_secrets",
+                   ".codex_oauth.json", ".gemini_oauth.json", ".playwright_state.json")
+        or p.name.endswith(("_oauth.json", "_secrets"))
+        or ".playwright_userdata" in str(p) or p.name.endswith(".env")
+    )]
+    if bad:
+        raise RuntimeError(f"Refusing to deploy — secret-ish files in context: {[str(b) for b in bad]}")
 
 
 def push_code() -> None:

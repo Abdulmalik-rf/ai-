@@ -18,7 +18,10 @@ config = context.config
 if config.config_file_name:
     fileConfig(config.config_file_name)
 
-config.set_main_option("sqlalchemy.url", settings.database_url)
+# Escape % so ConfigParser's interpolation doesn't choke on URL-encoded
+# passwords (e.g. an `@` becomes `%40` in the DSN). SQLAlchemy receives the
+# de-interpolated value unchanged.
+config.set_main_option("sqlalchemy.url", settings.database_url.replace("%", "%%"))
 
 target_metadata = Base.metadata
 

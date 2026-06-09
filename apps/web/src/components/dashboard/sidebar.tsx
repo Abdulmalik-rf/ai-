@@ -15,6 +15,7 @@ import {
   UserCog,
   Users,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
 import { BrandLogo } from "@/components/brand-logo";
@@ -22,7 +23,14 @@ import { logout } from "@/lib/auth";
 import { Link, usePathname } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
-const PRIMARY = [
+type NavItem = {
+  href: string;
+  icon: LucideIcon;
+  key: string;
+  exact?: boolean;
+};
+
+const PRIMARY: NavItem[] = [
   { href: "/dashboard", icon: BookOpen, key: "overview", exact: true },
   { href: "/dashboard/clients", icon: Users, key: "clients" },
   { href: "/dashboard/cases", icon: Briefcase, key: "cases" },
@@ -37,14 +45,14 @@ const PRIMARY = [
   // lives inline on the dashboard home, accessible via "Overview" above.
   { href: "/dashboard/documents", icon: Layers, key: "files" },
   { href: "/dashboard/whatsapp", icon: MessageCircle, key: "whatsapp" },
-] as const;
+];
 
 // Secondary nav group used to host "Support", "Suggestions", and "Guide" —
 // but those pages don't exist yet, so the links pointed at /billing or
 // /settings and confused users. Until the pages are built (or an external
 // help URL is decided), the secondary group is empty and the sidebar
 // renders only the sign-out button below it.
-const SECONDARY = [] as const;
+const SECONDARY: NavItem[] = [];
 
 /**
  * Icon-rail sidebar that expands on hover. Fixed-positioned so the main

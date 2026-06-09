@@ -27,9 +27,10 @@ RUN pnpm install --no-frozen-lockfile
 COPY . ./
 RUN pnpm build
 
-# HF Spaces run as UID 1000.
-RUN useradd -m -u 1000 user && chown -R user:user /app
-USER user
+# HF Spaces run as UID 1000 — the node:22 image already provides the `node`
+# user at UID 1000, so reuse it (creating another at 1000 collides).
+RUN chown -R node:node /app
+USER node
 
 EXPOSE 7860
 CMD ["pnpm", "start"]

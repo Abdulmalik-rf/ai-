@@ -10,10 +10,14 @@ ENV NEXT_TELEMETRY_DISABLED=1 \
     HOSTNAME=0.0.0.0
 
 WORKDIR /app
-# Build tools in case any approved dependency needs to compile a native addon.
+# Build tools in case any dependency needs to compile a native addon.
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 make g++ && rm -rf /var/lib/apt/lists/*
-RUN corepack enable
+# Pin pnpm 9 — pnpm 10+ gates dependency build scripts behind an interactive
+# "approve-builds" step (ERR_PNPM_IGNORED_BUILDS) that fails non-interactive
+# Docker builds, and it no longer reads package.json's `pnpm` field. pnpm 9
+# runs build scripts directly.
+RUN npm install -g pnpm@9
 
 # Install deps first (layer-cached across source changes).
 COPY package.json pnpm-lock.yaml ./

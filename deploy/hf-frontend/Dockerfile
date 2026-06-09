@@ -10,6 +10,9 @@ ENV NEXT_TELEMETRY_DISABLED=1 \
     HOSTNAME=0.0.0.0
 
 WORKDIR /app
+# Build tools in case any approved dependency needs to compile a native addon.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 make g++ && rm -rf /var/lib/apt/lists/*
 RUN corepack enable
 
 # Install deps first (layer-cached across source changes).

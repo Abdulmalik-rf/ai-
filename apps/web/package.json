@@ -41,6 +41,12 @@
     "node": ">=20"
   },
   "pnpm": {
-    "onlyBuiltDependencies": []
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@swc/core",
+      "unrs-resolver",
+      "esbuild",
+      "sharp"
+    ]
   }
 }

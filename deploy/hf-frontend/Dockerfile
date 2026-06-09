@@ -1,7 +1,9 @@
 # Hugging Face Space (Docker) — runs the Next.js frontend via `next start`.
 # Build happens in the image so container start is fast. The backend URL is
 # baked into the app (src/lib/api.ts default), so no runtime env is required.
-FROM node:20-slim
+# Node 22: modern pnpm (11.x) requires the built-in `node:sqlite` module,
+# which only exists on Node 22+.
+FROM node:22-slim
 
 ENV NEXT_TELEMETRY_DISABLED=1 \
     PORT=7860 \
@@ -12,7 +14,7 @@ RUN corepack enable
 
 # Install deps first (layer-cached across source changes).
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --no-frozen-lockfile
 
 # App source + production build.
 COPY . ./
